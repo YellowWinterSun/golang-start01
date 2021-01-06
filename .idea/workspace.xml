@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb80917b-1c28-46a7-8eca-33a7634b1998" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/源码学习/源码bytes_Buffer.go" afterDir="false" />
+    <list default="true" id="bb80917b-1c28-46a7-8eca-33a7634b1998" name="Default Changelist" comment="Feat: copy()函数简单用法">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,15 +41,7 @@
       <recent name="D:\HDY\ProgramSoftware\GO\workspace\start01\GO程序设计语言\第二章\基础数据类型" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build 源码bytes_Buffer.go">
-    <configuration name="go build JSON转struct练习.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="start01" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/GO程序设计语言/第二章_数据类型/JSON/JSON转struct练习.go" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Go Build.go build 字符数组copy.go">
     <configuration name="go build 匿名函数.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="start01" />
       <working_directory value="$PROJECT_DIR$" />
@@ -138,6 +130,14 @@
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
+    <configuration name="go build 字符数组copy.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="start01" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/GO程序设计语言/第一章_入门/字符数组copy.go" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
     <configuration name="go build map实现set不重复集合.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="start01" />
       <working_directory value="$PROJECT_DIR$" />
@@ -148,17 +148,22 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build 字符数组copy.go" />
         <item itemvalue="Go Build.go build 源码bytes_Buffer.go" />
         <item itemvalue="Go Build.go build map实现set不重复集合.go" />
         <item itemvalue="Go Build.go build 匿名函数.go" />
         <item itemvalue="Go Build.go build 结构体方法.go" />
-        <item itemvalue="Go Build.go build JSON转struct练习.go" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="源码部分" />
+    <MESSAGE value="Feat: copy()函数简单用法" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feat: copy()函数简单用法" />
   </component>
   <component name="WindowStateProjectService">
     <state x="75" y="190" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609764995111">
@@ -181,26 +186,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1213" y="217" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609934614727" />
-    <state width="1877" height="316" key="GridCell.Tab.0.bottom" timestamp="1609938462807">
+    <state width="1877" height="316" key="GridCell.Tab.0.bottom" timestamp="1609945956646">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="914" height="259" key="GridCell.Tab.0.bottom/0.0.1280.984@0.0.1280.984" timestamp="1609834142447" />
-    <state width="1877" height="316" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1609938462807" />
-    <state width="1877" height="316" key="GridCell.Tab.0.center" timestamp="1609938462806">
+    <state width="1877" height="316" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1609945956646" />
+    <state width="1877" height="316" key="GridCell.Tab.0.center" timestamp="1609945956646">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="914" height="259" key="GridCell.Tab.0.center/0.0.1280.984@0.0.1280.984" timestamp="1609834142447" />
-    <state width="1877" height="316" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1609938462806" />
-    <state width="1877" height="316" key="GridCell.Tab.0.left" timestamp="1609938462806">
+    <state width="1877" height="316" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1609945956646" />
+    <state width="1877" height="316" key="GridCell.Tab.0.left" timestamp="1609945956646">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="914" height="259" key="GridCell.Tab.0.left/0.0.1280.984@0.0.1280.984" timestamp="1609834142447" />
-    <state width="1877" height="316" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1609938462806" />
-    <state width="1877" height="316" key="GridCell.Tab.0.right" timestamp="1609938462807">
+    <state width="1877" height="316" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1609945956646" />
+    <state width="1877" height="316" key="GridCell.Tab.0.right" timestamp="1609945956646">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="914" height="259" key="GridCell.Tab.0.right/0.0.1280.984@0.0.1280.984" timestamp="1609834142447" />
-    <state width="1877" height="316" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1609938462807" />
+    <state width="1877" height="316" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1609945956646" />
     <state width="1877" height="258" key="GridCell.Tab.1.bottom" timestamp="1609938423369">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -221,10 +226,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="834" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1609934844091" />
-    <state x="1032" y="253" key="Vcs.Push.Dialog.v2" timestamp="1609935155715">
+    <state x="1032" y="253" key="Vcs.Push.Dialog.v2" timestamp="1609945935904">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1032" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1609935155715" />
+    <state x="1032" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1609945935904" />
     <state width="487" height="523" key="XDebugger.FullValuePopup" timestamp="1609938297492">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
