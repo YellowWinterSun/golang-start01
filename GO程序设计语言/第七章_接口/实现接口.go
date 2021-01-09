@@ -75,4 +75,19 @@ func main() {
 	// 编译报错。原因是HighAnimal包含了Animal所有方法定义，而Animal反之
 	//highAnimalInterface = animalInterface
 
+	/*
+		todo 断言
+	*/
+	// 断言Dog 实现了 Animal
+	var assertDogIsAnimal Animal = new(Dog)
+	fmt.Println(assertDogIsAnimal)
+
+	// Dog没有实现HighAnimal的所有方法
+	//var assertDogIsHighAnimal HighAnimal = new(Dog)	// 编译报错
+
+	var assertPersonIsAnimal Animal = new(Person)
+	fmt.Println(assertPersonIsAnimal)
+
+	// 上述方法会调用new函数，申请一块空间
+	assertDogIsAnimal = (*Dog)(nil)
 }

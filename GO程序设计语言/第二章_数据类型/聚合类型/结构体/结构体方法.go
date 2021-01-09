@@ -24,10 +24,13 @@ func (p *MyName) MyNameSay() {
 }
 
 func main() {
-	c1 := MyColor{&MyPoint{1,2}, &MyName{"DG"}}
+	c1 := MyColor{&MyPoint{1, 2}, &MyName{"DG"}}
 	c1.MyNameSay()
 	c1.A.MyPointSay()
 
+	p1 := &c1
+	p1.MyNameSay()
+
 	funcP := c1.MyNameSay
-	funcP()	// 相当于调用c1.MyNameSay()
+	funcP() // 相当于调用c1.MyNameSay()
 }
