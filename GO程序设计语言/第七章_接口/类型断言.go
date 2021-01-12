@@ -9,8 +9,8 @@ import (
 
 func main() {
 	// way1()
-	// way2()
-	typeSwitchDemo()
+	way2()
+	//typeSwitchDemo()
 }
 
 /*
@@ -47,6 +47,10 @@ func way2() {
 	fmt.Printf("%T %v\n", c, ok)
 }
 
+type testStruct struct {
+	id int
+}
+
 func typeSwitchDemo() {
 	fmt.Println(whichType(int(1)))          // 1
 	fmt.Println(whichType(int32(1)))        // 1
@@ -56,7 +60,7 @@ func typeSwitchDemo() {
 	fmt.Println(whichType("hello"))         // hello
 	fmt.Println(whichType([]byte("hello"))) // unexpected type []uint8 [104 101 108 108 111]
 	fmt.Println(whichType(rune('G')))       // G
-
+	fmt.Println(whichType(testStruct{1}))
 }
 
 func whichType(x interface{}) string {
@@ -71,6 +75,8 @@ func whichType(x interface{}) string {
 		return fmt.Sprintf("%s", x)
 	case bool:
 		return fmt.Sprintf("%v", x)
+	case testStruct:
+		return fmt.Sprintf("is testStruct")
 	default:
 		return fmt.Sprintf("unexpected type %T %v", x, x)
 	}
