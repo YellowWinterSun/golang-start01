@@ -1,35 +1,33 @@
 package main
 
 import (
-	"bytes"
 	"fmt"
+	"os"
+	"os/signal"
+	"syscall"
 )
 
-func main() {
-	fmt.Println(intsToString([]int{1,2,3}))
-
-	buf := bytes.NewBufferString("Hello")
-	buf.WriteString(",world")
-	fmt.Println(buf.String())
-
-	buf2 := bytes.NewBufferString("黄冬")
-	r, z, _ := buf2.ReadRune()
-	fmt.Println("r=", string(r), ", z=", z)
-	r, z, _ = buf2.ReadRune()
-	fmt.Println("r=", string(r), ", z=", z)
-
-}
-
-func intsToString(values []int) string {
-	var buf bytes.Buffer
-
-	for i, v := range values {
-		if i > 0 {
-			buf.WriteString(",")
-		}
-		fmt.Fprintf(&buf, "%d", v)
+// ⽣产者: ⽣成 factor 整数倍的序列
+func Producer(factor int, out chan<- int) {
+	for i := 0; ; i++ {
+		out <- i * factor
 	}
-
-	return buf.String()
 }
 
+// 消费者
+func Consumer(in <-chan int) {
+	for v := range in {
+		fmt.Println(v)
+	}
+}
+
+func main() {
+	ch := make(chan int, 64) // 成果队列
+	go Producer(3, ch)       // ⽣成 3 的倍数的序列
+	go Producer(5, ch)       // ⽣成 5 的倍数的序列
+	go Consumer(ch)          // 消费 ⽣成的队列
+	// Ctrl+C 退出
+	sig := make(chan os.Signal, 1)
+	signal.Notify(sig, syscall.SIGINT, syscall.SIGTERM)
+	fmt.Printf("quit (%v)\n", <-sig)
+}
